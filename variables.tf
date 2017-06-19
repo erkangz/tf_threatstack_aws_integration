@@ -32,6 +32,12 @@ variable "aws_cloudtrail_name" {
   default = "ThreatStackIntegration"
 }
 
+variable "aws_cloudtrail_access_log_bucket" {
+  type = "string"
+  description = "S3 bucket to send cloudtrail access logs to"
+  default = "cloudtrail-accesslogs"
+}
+
 variable "aws_iam_role_name" {
   type = "string"
   description = "Threat Stack IAM role Name"
@@ -93,4 +99,3 @@ variable "is_multi_region_trail" {
   description = "Whether the trail is created in all regions or just the current region."
   default = true
 }
-
